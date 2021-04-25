@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{87011dd8-461a-4323-887a-07b25d24ac74}</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Master code</AssemblyName>
+    <Name>Master code</Name>
+    <RootNamespace>Master code</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.5.0</AsfVersion>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.42.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+      <Value>../SOURCE/HAL/KEYPAD/Inc</Value>
+      <Value>../SOURCE/HAL/LCD/Inc</Value>
+      <Value>../SOURCE/HAL/LED/Inc</Value>
+      <Value>../SOURCE/Lib</Value>
+      <Value>../SOURCE/MCAL/DIO/Inc</Value>
+      <Value>../SOURCE/MCAL/EEPROM/Inc</Value>
+      <Value>../SOURCE/MCAL/SPI/Inc</Value>
+      <Value>../SOURCE/MCAL/TIMER/Inc</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APPLICATION\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APPLICATION\menu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\KEYPAD\Inc\keypad_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\KEYPAD\Src\keypad_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\LCD\Inc\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\LCD\Inc\LCD_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\LCD\Src\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\LED\Inc\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\HAL\LED\Src\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\Lib\main_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\Lib\menu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\Lib\std_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\Lib\STD_MESSAGES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\Lib\STD_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\DIO\Inc\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\DIO\Inc\DIO_config_master.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\DIO\Src\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\EEPROM\Inc\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\EEPROM\Src\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\SPI\Inc\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\SPI\Src\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\TIMER\Inc\timer_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SOURCE\MCAL\TIMER\Src\timer_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Master.componentinfo.xml">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APPLICATION" />
+    <Folder Include="SOURCE" />
+    <Folder Include="SOURCE\HAL" />
+    <Folder Include="SOURCE\HAL\KEYPAD" />
+    <Folder Include="SOURCE\HAL\KEYPAD\Inc\" />
+    <Folder Include="SOURCE\HAL\KEYPAD\Src\" />
+    <Folder Include="SOURCE\HAL\LCD" />
+    <Folder Include="SOURCE\HAL\LCD\Inc\" />
+    <Folder Include="SOURCE\HAL\LCD\Src\" />
+    <Folder Include="SOURCE\HAL\LED" />
+    <Folder Include="SOURCE\HAL\LED\Inc\" />
+    <Folder Include="SOURCE\HAL\LED\Src\" />
+    <Folder Include="SOURCE\Lib" />
+    <Folder Include="SOURCE\MCAL" />
+    <Folder Include="SOURCE\MCAL\DIO" />
+    <Folder Include="SOURCE\MCAL\DIO\Inc\" />
+    <Folder Include="SOURCE\MCAL\DIO\Src\" />
+    <Folder Include="SOURCE\MCAL\EEPROM" />
+    <Folder Include="SOURCE\MCAL\EEPROM\Inc\" />
+    <Folder Include="SOURCE\MCAL\EEPROM\Src\" />
+    <Folder Include="SOURCE\MCAL\SPI\Inc\" />
+    <Folder Include="SOURCE\MCAL\SPI\Src\" />
+    <Folder Include="SOURCE\MCAL\TIMER" />
+    <Folder Include="SOURCE\MCAL\SPI" />
+    <Folder Include="SOURCE\MCAL\TIMER\Inc\" />
+    <Folder Include="SOURCE\MCAL\TIMER\Src\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
